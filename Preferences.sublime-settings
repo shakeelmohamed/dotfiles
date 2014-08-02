@@ -1,17 +1,17 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/Colorsublime/themes/Monokai-Vivid.tmTheme",
+	"color_scheme": "Packages/User/Colorsublime/themes/monokai-best.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
-	"font_size": 12.0,
+	"font_size": 13.0,
 	"highlight_line": true,
 	"ignored_packages":
 	[
+		"Vintage",
 		"HTML-CSS-JS Prettify",
 		"JSHint",
 		"Gist",
-		"xmllint",
-		"Vintage",
-		"SublimeCodeIntel"
+		"SublimeCodeIntel",
+		"xmllint"
 	],
 	"index_files": false,
 	"scroll_past_end": true,
