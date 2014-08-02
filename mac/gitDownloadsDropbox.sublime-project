@@ -2,19 +2,20 @@
 	"folders":
 	[
 		{
+			"follow_symlinks": true,
 			"path": "git"
 		},
 		{
-			"path": "/Users/smohamed"
+			"follow_symlinks": true,
+			"path": "."
 		},
 		{
+			"follow_symlinks": true,
 			"path": "Downloads"
 		},
 		{
+			"follow_symlinks": true,
 			"path": "Dropbox"
-		},
-		{
-			"path": "Desktop/site"
 		}
 	]
 }
