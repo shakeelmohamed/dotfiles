@@ -1,0 +1,33 @@
+{
+	"folders":
+	[
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-javascript"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-java"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-python"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-csharp"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-ruby"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-php"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "git/splunk-sdk-test_harness"
+		}
+	]
+}
