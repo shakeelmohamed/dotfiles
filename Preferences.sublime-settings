@@ -1,22 +1,25 @@
 {
-	"bold_folder_labels": true,
-	"color_scheme": "Packages/User/Colorsublime/themes/monokai-best.tmTheme",
-	"dictionary": "Packages/Language - English/en_US.dic",
-	"font_size": 13.0,
-	"highlight_line": true,
-	"ignored_packages":
-	[
-		"Vintage",
-		"HTML-CSS-JS Prettify",
-		"JSHint",
-		"Gist",
-		"SublimeCodeIntel",
-		"xmllint"
-	],
-	"index_files": false,
-	"scroll_past_end": true,
-	"spell_check": true,
-	"tab_size": 4,
-	"theme": "Spacegray Eighties.sublime-theme",
-	"translate_tabs_to_spaces": true
+    "bold_folder_labels": true,
+    "color_scheme": "Packages/User/Colorsublime/themes/monokai-best.tmTheme",
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "font_size": 13.0,
+    "highlight_line": true,
+    "ignored_packages":
+    [
+        "SublimeCodeIntel",
+        "Gist",
+        "Vintage",
+        "HTML-CSS-JS Prettify",
+        "JSHint",
+        "Markdown",
+        "xmllint",
+        "WordCount",
+        "SideBarEnhancements"
+    ],
+    "index_files": false,
+    "scroll_past_end": true,
+    "spell_check": true,
+    "tab_size": 4,
+    "theme": "Spacegray Eighties.sublime-theme",
+    "translate_tabs_to_spaces": true
 }
