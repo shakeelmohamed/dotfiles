@@ -1,0 +1,4 @@
+{
+    "cmd": ["rpcgen", "-a", "-C", "$file"],
+    "selector": "source.rpcgen"
+}
