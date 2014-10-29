@@ -43,3 +43,9 @@ export P4USER=AD_USERNAME
 export P4PORT=perforce.somethingsomething.com:1666
 export P4EDITOR=subl
 export P4CLIENT=AD_USERNAME-PCNAME
+
+# Use openssl's SHA-1 command as a function
+sha1Func() {
+    echo -n $1 | openssl sha1
+}
+alias sha1=sha1Func
