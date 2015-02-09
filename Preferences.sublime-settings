@@ -2,25 +2,25 @@
     "bold_folder_labels": true,
     "color_scheme": "Packages/Colorsublime - Themes/monokai-best.tmTheme",
     "dictionary": "Packages/Language - English/en_US.dic",
+    "draw_centered": true,
     "font_size": 13.0,
     "highlight_line": true,
     "ignored_packages":
     [
-        "WordCount",
-        "JSHint",
         "SideBarEnhancements",
-        "Markdown",
         "xmllint",
-        "HTML-CSS-JS Prettify",
+        "JSHint",
         "Gist",
+        "WordCount",
         "SublimeCodeIntel",
+        "HTML-CSS-JS Prettify",
+        "Markdown",
         "Vintage"
     ],
     "index_files": false,
     "scroll_past_end": true,
     "spell_check": true,
     "tab_size": 4,
-    "draw_centered": true,
     "theme": "Spacegray Eighties.sublime-theme",
     "translate_tabs_to_spaces": true
 }
