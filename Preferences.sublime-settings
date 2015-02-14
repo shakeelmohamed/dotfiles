@@ -7,15 +7,15 @@
     "highlight_line": true,
     "ignored_packages":
     [
-        "SideBarEnhancements",
-        "xmllint",
         "JSHint",
-        "Gist",
-        "WordCount",
-        "SublimeCodeIntel",
-        "HTML-CSS-JS Prettify",
+        "Vintage",
+        "xmllint",
         "Markdown",
-        "Vintage"
+        "SublimeCodeIntel",
+        "Gist",
+        "SideBarEnhancements",
+        "WordCount",
+        "HTML-CSS-JS Prettify"
     ],
     "index_files": false,
     "scroll_past_end": true,

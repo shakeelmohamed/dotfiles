@@ -3,6 +3,9 @@ echo "Shak shock."
 # alias for cd-ing to git dir
 alias gitgit="cd ~/work/git"
 
+# clear git cache
+alias gitclear="git rm -r --cached ."
+
 # Java env
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
@@ -19,3 +22,6 @@ SPLUNKCMD() {
     $SPLUNK_HOME/bin/splunk $@
 }
 alias SPLUNK=SPLUNKCMD
+
+# Sublime text!
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
