@@ -3,9 +3,13 @@
 GIT_SETUP_FUNC() {
     echo "WARNING: not checking for existing SSH keys!"
 
+    # Use current branch only when doing git push
+    git config --global push.default current
+
     echo "What's your git name?"
     read GIT_SETUP_NAME
     git config --global user.name $GIT_SETUP_NAME
+
     echo "What's your git email?"
     read GIT_SETUP_EMAIL
     git config --global user.email $GIT_SETUP_EMAIL
