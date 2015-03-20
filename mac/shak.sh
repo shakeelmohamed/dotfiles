@@ -1,5 +1,8 @@
 echo "Shak shock."
 
+# Restart zsh
+alias restart="exec zsh"
+
 # Edit this file
 alias shakshock="subl ~/shak.sh"
 
@@ -13,6 +16,8 @@ alias gitclear="git rm -r --cached ."
 export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
 # Splunk things
+alias splgo="open http://localhost:8000"
+
 alias splunks="cd ~/work/splunks"
 
 SPLUNK_HOME_BASE=~/work/splunks/splunk
@@ -20,11 +25,16 @@ SPLUNK_VERSION_STR="613"
 
 export SPLUNK_HOME=$SPLUNK_HOME_BASE$SPLUNK_VERSION_STR
 
+## MANUALLY OVERRIDE SPLUNK_HOME FOR CORE
+# export SPLUNK_HOME="$HOME/work/splunks/core"
+
 # Alias to do something with splunk
 SPLUNKCMD() {
     $SPLUNK_HOME/bin/splunk $@
 }
 alias SPLUNK=SPLUNKCMD
+
+alias spl="echo $SPLUNK_HOME"
 
 # Sublime text!
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
