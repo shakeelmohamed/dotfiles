@@ -20,8 +20,22 @@ alias splgo="open http://localhost:8000"
 
 alias splunks="cd ~/work/splunks"
 
+alias spls="ls ~/work/splunks"
+
+splunk_version_file=~/splunkver
+SPLUNK_VERSION_CMD()
+{
+    if [ "$#" -ne 1 ]; then
+        cat $splunk_version_file
+    else
+        echo $1 > $splunk_version_file
+        SPLUNK_VERSION_CMD
+    fi
+}
+alias splver=SPLUNK_VERSION_CMD
+
 SPLUNK_HOME_BASE=~/work/splunks/splunk
-SPLUNK_VERSION_STR="613"
+SPLUNK_VERSION_STR=$(splver)
 
 export SPLUNK_HOME=$SPLUNK_HOME_BASE$SPLUNK_VERSION_STR
 
@@ -34,7 +48,10 @@ SPLUNKCMD() {
 }
 alias SPLUNK=SPLUNKCMD
 
+alias splunkrc="subl ~/.splunkrc"
+
 alias spl="echo $SPLUNK_HOME"
+
 
 # Sublime text!
 alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
@@ -60,4 +77,7 @@ alias SDKREL=SDKRELCMD
 
 # NVM
 export NVM_DIR=~/.nvm
-source $(brew --prefix nvm)/nvm.sh
+
+# tree command
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
+
