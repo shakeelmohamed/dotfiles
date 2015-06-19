@@ -81,3 +81,4 @@ export NVM_DIR=~/.nvm
 # tree command
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
+alias mvnpkg="mvn package -Dmaven.test.skip=true"
