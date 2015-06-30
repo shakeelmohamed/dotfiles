@@ -1,5 +1,8 @@
 echo "Shak shock."
 
+# Cross-platform notepad
+alias notepad.exe="vim $@"
+
 # Restart zsh
 alias restart="exec zsh"
 
