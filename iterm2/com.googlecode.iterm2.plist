@@ -1128,7 +1128,7 @@
 			<key>Tags</key>
 			<array/>
 			<key>Terminal Type</key>
-			<string>xterm-256color</string>
+			<string>xterm</string>
 			<key>Transparency</key>
 			<real>0.0</real>
 			<key>Triggers</key>
