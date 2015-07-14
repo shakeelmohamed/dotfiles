@@ -7,7 +7,7 @@ GIT_SETUP_FUNC() {
     git config --global push.default current
 
     echo "What's your git name?"
-    read GIT_SETUP_NAME
+    read GIT_SETUP_NAME -e
     git config --global user.name $GIT_SETUP_NAME
 
     echo "What's your git email?"
@@ -25,6 +25,9 @@ GIT_SETUP_FUNC() {
 
     echo "Now copying SSH key to clipboard..."
     pbcopy < ~/.ssh/id_rsa.pub
+
+    # Use the patience algorithm for diffing
+    git config --global diff.algorithm patience
 }
 
 alias gitsetup=GIT_SETUP_FUNC
