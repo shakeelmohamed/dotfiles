@@ -37,7 +37,7 @@ SPLUNK_VERSION_CMD()
 }
 alias splver=SPLUNK_VERSION_CMD
 
-SPLUNK_HOME_BASE=~/work/splunks/splunk
+SPLUNK_HOME_BASE=~/work/splunks/
 SPLUNK_VERSION_STR=$(splver)
 
 export SPLUNK_HOME=$SPLUNK_HOME_BASE$SPLUNK_VERSION_STR
@@ -80,8 +80,12 @@ alias SDKREL=SDKRELCMD
 
 # NVM
 export NVM_DIR=~/.nvm
+source $(brew --prefix nvm)/nvm.sh
 
 # tree command
 alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 alias mvnpkg="mvn package -Dmaven.test.skip=true"
+
+# Strange hack for docker
+$(boot2docker shellinit 2> /dev/null)
