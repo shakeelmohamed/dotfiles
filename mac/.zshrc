@@ -82,8 +82,9 @@ source $ZSH/oh-my-zsh.sh
 export NVM_DIR="/Users/smohamed/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
+# added by travis gem
+[ -f /Users/smohamed/.travis/travis.sh ] && source /Users/smohamed/.travis/travis.sh
 
 source ~/shak.sh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
