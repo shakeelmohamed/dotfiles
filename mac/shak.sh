@@ -33,6 +33,7 @@ SPLUNK_VERSION_CMD()
     else
         echo $1 > $splunk_version_file
         SPLUNK_VERSION_CMD
+        restart
     fi
 }
 alias splver=SPLUNK_VERSION_CMD
