@@ -93,3 +93,12 @@ mkgo() {
 }
 # Strange hack for docker
 $(boot2docker shellinit 2> /dev/null)
+
+# Upload a Splunk app: splapp user password host path-to-app
+splapp() {
+    if [ "$#" -lt 4 ]; then
+        echo "Usage: splapp user password host path-to-app"
+    else
+        curl -k -u $1:$2 "https://$3:8089/services/apps/appinstall" -d "name=$4" "${@:5}"
+    fi
+}
