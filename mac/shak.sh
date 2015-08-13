@@ -21,7 +21,7 @@ export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 # Splunk things
 alias splgo="open http://localhost:8000"
 
-alias splunks="cd ~/work/splunks"
+export splunks=$HOME/work/splunks
 
 alias spls="ls ~/work/splunks"
 
