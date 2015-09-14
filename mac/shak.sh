@@ -102,3 +102,14 @@ splapp() {
         curl -k -u $1:$2 "https://$3:8089/services/apps/appinstall" -d "name=$4" "${@:5}"
     fi
 }
+
+alias gs="git status"
+
+# TODO: not sure if this actually works
+gitslurp() {
+    if [ "$#" -eq 1 ]; then
+        git branch --set-upstream-to="origin/$1" $1
+    else
+        git branch --set-upstream-to="$1/$2" $2
+    fi
+}
