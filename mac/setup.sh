@@ -6,6 +6,6 @@ mkdir ~/work
 mkdir ~/work/git
 
 # Create symlink from git repo to home for shak shock script
-ln -s ~/work/git/.files/mac/shak.sh ~/shak.sh
+ln -s ~/work/git/dotfiles/mac/shak.sh ~/shak.sh
 # Setup zshrc
-ln -s -f ~/work/git/.files/mac/.zshrc ~/.zshrc
+ln -s -f ~/work/git/dotfiles/mac/.zshrc ~/.zshrc
