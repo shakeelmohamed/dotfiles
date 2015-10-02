@@ -4,6 +4,8 @@ echo "WARNING: not checking for existing SSH keys!"
 
 # Use current branch only when doing git push
 git config --global push.default current
+# Use the patience algorithm for diffing
+git config --global diff.algorithm patience
 
 echo "What's your git name?"
 read GIT_SETUP_NAME
@@ -22,9 +24,6 @@ eval "$(ssh-agent -s)"
 echo "Adding SSH key..."
 ssh-add ~/.ssh/id_rsa
 
-echo "Now copying SSH key to clipboard..."
-cat ~/.ssh/id_rsa.pub | xclip
-
-# Use the patience algorithm for diffing
-git config --global diff.algorithm patience
+echo "Here's your new public SSH key..."
+cat ~/.ssh/id_rsa.pub
 
