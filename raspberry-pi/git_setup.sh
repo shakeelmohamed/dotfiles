@@ -6,7 +6,7 @@ echo "WARNING: not checking for existing SSH keys!"
 git config --global push.default current
 
 echo "What's your git name?"
-read GIT_SETUP_NAME -e
+read GIT_SETUP_NAME
 git config --global user.name $GIT_SETUP_NAME
 
 echo "What's your git email?"
