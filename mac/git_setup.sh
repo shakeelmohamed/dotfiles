@@ -1,6 +1,6 @@
 # Setup git for the first time
 
-GIT_SETUP_FUNC() {
+gitsetup() {
     echo "WARNING: not checking for existing SSH keys!"
 
     # Use current branch only when doing git push
@@ -30,5 +30,4 @@ GIT_SETUP_FUNC() {
     git config --global diff.algorithm patience
 }
 
-alias gitsetup=GIT_SETUP_FUNC
-
+gitsetup()
