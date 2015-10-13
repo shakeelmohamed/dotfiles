@@ -113,3 +113,7 @@ gitslurp() {
         git branch --set-upstream-to="$1/$2" $2
     fi
 }
+
+# phpenv
+export PATH="/Users/smohamed/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
