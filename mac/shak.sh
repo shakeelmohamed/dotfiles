@@ -15,8 +15,23 @@ alias gitgit="cd ~/work/git"
 # clear git cache
 alias gitclear="git rm -r --cached ."
 
+alias gs="git status"
+alias gdt="git difftool $@"
+
+gitslurp() {
+    if [ "$#" -eq 0 ]; then
+        1="$(git rev-parse --abbrev-ref HEAD)"
+    fi
+
+    if [ "$#" -eq 1 ]; then
+        git branch --set-upstream-to="origin/$1" $1
+    else
+        git branch --set-upstream-to="$1/$2" $2
+    fi
+}
+
 # Java env
-export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
+# export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
 # Splunk things
 alias splgo="open http://localhost:8000"
@@ -73,11 +88,13 @@ if which pyenv > /dev/null;
 fi
 
 # Splunk SDK release
-SDKRELCMD() {
-    md5 $1
-    openssl dgst -sha512 $1
+SDKREL() {
+    for filename in $@; do
+        md5 $filename
+        openssl dgst -sha512 $filename
+        echo ""
+    done
 }
-alias SDKREL=SDKRELCMD
 
 # NVM
 export NVM_DIR=~/.nvm
@@ -103,17 +120,42 @@ splapp() {
     fi
 }
 
-alias gs="git status"
+export PATH="/Users/smohamed/.phpenv/bin:$PATH"
+eval "$(phpenv init -)"
 
-# TODO: not sure if this actually works
-gitslurp() {
-    if [ "$#" -eq 1 ]; then
-        git branch --set-upstream-to="origin/$1" $1
-    else
-        git branch --set-upstream-to="$1/$2" $2
+DELETEMYSPLUNKEVENTS() {
+    if [ "$#" -eq 0 ]; then
+        1="admin"
+        2="1"
     fi
+    curl -k -u $1:$2 https://localhost:8089/services/search/jobs --data search="search * | delete"
 }
 
+
+sourcetree() {
+    if [ "$#" -eq 0 ]; then
+        1="$(pwd)"
+    fi
+    open -a SourceTree $1
+}
+alias srctree=sourcetree
+alias srct=sourcetree
+
+alias stash="cd ~/work/stash"
+
+pycharm() {
+    if [ "$#" -eq 0 ]; then
+        1="$(pwd)"
+    fi
+    open -a Pycharm $1
+}
+
+intellij() {
+    if [ "$#" -eq 0 ]; then
+        1="$(pwd)"
+    fi
+    open -a "IntelliJ IDEA 14 CE" $1
+}
 # phpenv
 export PATH="/Users/smohamed/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
