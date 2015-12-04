@@ -9,6 +9,8 @@ alias restart="exec zsh"
 # Edit this file
 alias shakshock="subl ~/shak.sh"
 
+alias dotfiles="cd ~/work/git/dotfiles"
+
 # alias for cd-ing to git dir
 alias gitgit="cd ~/work/git"
 
