@@ -1,5 +1,15 @@
 echo "Shak shock."
 
+function rm() {
+    trash $@
+}
+
+function tarme() {
+    tar cf "$1.tar.gz" "$1"
+}
+
+alias untar="tar xf $@"
+
 # Cross-platform notepad
 alias notepad.exe="vim $@"
 
