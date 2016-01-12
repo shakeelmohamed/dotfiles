@@ -171,3 +171,5 @@ intellij() {
 # phpenv
 export PATH="/Users/smohamed/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
+
+alias virus.exe="open ~/work/git/dotfiles/mac/RemoveSymantecMacFiles/RemoveSymantecMacFiles.command"
