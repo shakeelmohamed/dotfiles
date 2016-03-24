@@ -30,4 +30,4 @@ gitsetup() {
     git config --global diff.algorithm patience
 }
 
-gitsetup()
+gitsetup
