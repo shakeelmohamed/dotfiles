@@ -42,6 +42,11 @@ gitslurp() {
     fi
 }
 
+# Moves to trash instead of wiping completely, npm install -g trash-cli
+function rm() {
+    trash $@
+}
+
 # Java env
 # export JAVA_HOME="/System/Library/Frameworks/JavaVM.framework/Versions/1.6/Home"
 
@@ -68,10 +73,10 @@ alias splver=SPLUNK_VERSION_CMD
 SPLUNK_HOME_BASE=~/work/splunks/
 SPLUNK_VERSION_STR=$(splver)
 
-export SPLUNK_HOME=$SPLUNK_HOME_BASE$SPLUNK_VERSION_STR
+# export SPLUNK_HOME=$SPLUNK_HOME_BASE$SPLUNK_VERSION_STR
 
 ## MANUALLY OVERRIDE SPLUNK_HOME FOR CORE
-# export SPLUNK_HOME="$HOME/work/splunks/core"
+export SPLUNK_HOME="$HOME/work/splunks/core"
 
 # Alias to do something with splunk
 SPLUNKCMD() {
@@ -173,3 +178,6 @@ export PATH="/Users/smohamed/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
 alias virus.exe="open ~/work/git/dotfiles/mac/RemoveSymantecMacFiles/RemoveSymantecMacFiles.command"
+export SELENIUM="$HOME/selenium-server-standalone-2.48.2.jar"
+
+export RPI_MEDIA="$HOME/desktop/videos"
